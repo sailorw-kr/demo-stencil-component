@@ -9,6 +9,9 @@
     <script nomodule src="/build/demo-stencil-component.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <!-- <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component> -->
+    <counter-component-example btntext="up counter" color="primary">
+      <p className="slot" slot="slotdemo">I am rendered in a slot!</p>
+    </counter-component-example>
   </body>
 </html>
