@@ -10,7 +10,7 @@
 | Property  | Attribute | Description | Type     | Default     |
 | --------- | --------- | ----------- | -------- | ----------- |
 | `btntext` | `btntext` |             | `string` | `'up'`      |
-| `color`   | `color`   |             | `string` | `'primary'` |
+| `variant` | `variant` |             | `string` | `'primary'` |
 
 
 ## Events

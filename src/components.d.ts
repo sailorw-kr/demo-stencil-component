@@ -8,7 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CounterComponentExample {
         "btntext"?: string;
-        "color"?: string;
+        "variant"?: string;
     }
     interface MyComponent {
         /**
@@ -46,8 +46,8 @@ declare global {
 declare namespace LocalJSX {
     interface CounterComponentExample {
         "btntext"?: string;
-        "color"?: string;
         "onDidReset"?: (event: CustomEvent<any>) => void;
+        "variant"?: string;
     }
     interface MyComponent {
         /**
