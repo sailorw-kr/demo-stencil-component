@@ -1,3 +1,4 @@
+import { optionalPropArg } from '../../utils/utils'
 export default {
   // this creates a ‘Components’ folder and a ‘MyComponent’ subfolder
   title: 'Components/CounterComponent',
@@ -11,8 +12,8 @@ export default {
 };
 const Template = (args) => `
   <counter-component-example
-    ${args.btntext && `btntext="${args.btntext}"`}
-    ${args.variant && `variant="${args.variant}"`}
+    ${optionalPropArg('btntext', args)}
+    ${optionalPropArg('variant', args)}
   />
 `;
 
