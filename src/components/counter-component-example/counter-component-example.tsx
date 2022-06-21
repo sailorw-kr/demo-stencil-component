@@ -7,7 +7,7 @@ import { Component, Prop, h, Host, State, Event, EventEmitter } from '@stencil/c
 })
 export class CounterComponentExample {
   @Prop() btntext?: string = '🔺';
-  @Prop() variant?: string = '';
+  @Prop() variant?: string = 'primary';
   @State() counter: number = 0;
   @Event() didReset: EventEmitter;
 
