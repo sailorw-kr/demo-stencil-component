@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type     | Default     |
-| --------- | --------- | ----------- | -------- | ----------- |
-| `btntext` | `btntext` |             | `string` | `'up'`      |
-| `variant` | `variant` |             | `string` | `'primary'` |
+| Property  | Attribute | Description | Type     | Default |
+| --------- | --------- | ----------- | -------- | ------- |
+| `btntext` | `btntext` |             | `string` | `'🔺'`  |
+| `variant` | `variant` |             | `string` | `''`    |
 
 
 ## Events

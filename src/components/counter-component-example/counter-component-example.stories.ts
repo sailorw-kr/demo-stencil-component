@@ -20,5 +20,5 @@ const Template = (args) => `
 export const Counter = Template.bind({});
 Counter.args = {
   btntext: "",
-  variant: ""
+  variant: "primary"
 };

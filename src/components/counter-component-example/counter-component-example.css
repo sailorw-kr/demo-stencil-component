@@ -1,8 +1,15 @@
 :host {
-  display: block;
-  --btn-color: olive;
-  --btn-text-color: white;
-  --radius: 10px;
+  display: flex;
+  height: 200px;
+  width: 200px;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  border: 1px dashed blue;
+  --btn-color: yellow;
+  --btn-text-color: black;
+  --radius: 8px;
 }
 
 button {
@@ -10,11 +17,12 @@ button {
   color: var(--btn-text-color);
   padding: 10px;
   border: none;
-  border-radius: var(--radius)
+  border-radius: var(--radius);
+  margin: 3px;
 }
 
-.slot {
-  background: palevioletred;
+.buttons {
+  display: flex;
 }
 
 .counter {
