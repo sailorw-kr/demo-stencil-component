@@ -10,6 +10,15 @@ export namespace Components {
         "btntext"?: string;
         "variant"?: string;
     }
+    interface KdsPrice {
+        "compact"?: boolean;
+        "original": number;
+        "quantity": string;
+        "relative"?: boolean;
+        "relativePostfix"?: string;
+        "relativePrefix"?: string;
+        "value": any;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -32,6 +41,12 @@ declare global {
         prototype: HTMLCounterComponentExampleElement;
         new (): HTMLCounterComponentExampleElement;
     };
+    interface HTMLKdsPriceElement extends Components.KdsPrice, HTMLStencilElement {
+    }
+    var HTMLKdsPriceElement: {
+        prototype: HTMLKdsPriceElement;
+        new (): HTMLKdsPriceElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -40,6 +55,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "counter-component-example": HTMLCounterComponentExampleElement;
+        "kds-price": HTMLKdsPriceElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -48,6 +64,15 @@ declare namespace LocalJSX {
         "btntext"?: string;
         "onDidReset"?: (event: CustomEvent<any>) => void;
         "variant"?: string;
+    }
+    interface KdsPrice {
+        "compact"?: boolean;
+        "original"?: number;
+        "quantity"?: string;
+        "relative"?: boolean;
+        "relativePostfix"?: string;
+        "relativePrefix"?: string;
+        "value"?: any;
     }
     interface MyComponent {
         /**
@@ -65,6 +90,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "counter-component-example": CounterComponentExample;
+        "kds-price": KdsPrice;
         "my-component": MyComponent;
     }
 }
@@ -73,6 +99,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "counter-component-example": LocalJSX.CounterComponentExample & JSXBase.HTMLAttributes<HTMLCounterComponentExampleElement>;
+            "kds-price": LocalJSX.KdsPrice & JSXBase.HTMLAttributes<HTMLKdsPriceElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

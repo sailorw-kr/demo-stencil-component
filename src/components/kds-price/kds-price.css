@@ -1,0 +1,206 @@
+:root {
+  --font-size: var(--body-m);
+  --compact-font-size: var(--body-s);
+  --inverse-ink: var(--color-default-50);
+  --original-price-font-weight: var(--font-weight-normal);
+  --promotional-font-size: var(--body-l);
+  --promotional-compact-font-size: var(--body-m);
+  --promotional-font-text-size: var(--body-xs);
+  --promotional-font-compact-text-size: var(--body-xs);
+  --promotional-alternate-font-size: var(--heading-xl);
+  --promotional-alternate-compact-font-size: var(--body-l);
+  --promotional-alternate-font: var(--font-secondary);
+  --promotional-alternate-font-weight: var(--font-weight-bold);
+  --promotional-font-weight: var(--font-weight-medium);
+  --promotional-padding-y: var(--size-4);
+  --promotional-padding-x: var(--size-8);
+  --promotional-compact-padding-y: 0;
+  --promotional-compact-padding-x: var(--size-8);
+  --promotional-alternate-padding-y: var(--size-8);
+  --promotional-alternate-padding-x: var(--size-4);
+  --promotional-alternate-compact-padding-y: var(--size-2);
+  --promotional-alternate-compact-padding-x: var(--size-2);
+  --promotional-border-radius: var(--size-4);
+  --promotional-surface: var(--color-callout-300);
+  --promotional-surface-height: var(--size-20);
+  --promotional-compact-surface-height: var(--size-12);
+  --quantity-spacing: var(--size-12);
+  --quantity-compact-spacing: var(--size-8);
+  --quantity-font-size: var(--body-l);
+  --quantity-font-weight: var(--font-weight-normal);
+  --general-spacing-x: var(--size-4);
+  --general-spacing-y: var(--size-4);
+  --general-compact-spacing-y: var(--size-1);
+  --superscript-font-size: var(--body-l);
+}
+
+.kds-Price {
+  display: inline-block;
+  font-size: var(--font-size);
+}
+
+.kds-Price--inverse {
+  color: var(--inverse-ink);
+}
+
+.kds-Price.kds-Price--alternate {
+  font-size: var(--promotional-font-text-size);
+  font-weight: var(--promotional-alternate-font-weight);
+}
+
+.kds-Price-promotional,
+.kds-Price-singular {
+  position: relative;
+  display: inline-block;
+  font-size: var(--promotional-font-size);
+  font-weight: var(--promotional-font-weight);
+  white-space: nowrap;
+  margin: 0 var(--general-spacing-x) 0 0;
+}
+
+.kds-Price--compact .kds-Price-promotional,
+.kds-Price--compact .kds-Price-singular {
+  font-size: var(--promotional-compact-font-size);
+}
+
+.kds-Price-original {
+  display: inline-block;
+  font-weight: var(--original-price-font-weight);
+  margin: var(--general-spacing-y) var(--general-spacing-x) 0 0;
+  white-space: nowrap;
+}
+
+.kds-Price--compact .kds-Price-original {
+  font-size: var(--compact-font-size);
+  margin: var(--general-compact-spacing-y) var(--general-spacing-x) 0 0;
+}
+
+.kds-Price--alternate.kds-Price--compact .kds-Price-original {
+  font-size: var(--promotional-font-compact-text-size);
+}
+
+.kds-Price-promotional {
+  padding: var(--promotional-padding-y) var(--promotional-padding-x);
+  border-radius: var(--promotional-border-radius);
+  background-color: var(--promotional-surface);
+
+  /* This is to override user agent stylesheets which may directly assign 'black'
+   * and to allow color applied to ancestors to cascade down. */
+  color: inherit;
+}
+
+.kds-Price-promotional--plain,
+.kds-Price--alternate .kds-Price-promotional,
+.kds-Price--alternate .kds-Price-promotional--plain.kds-Price-promotional--decorated {
+  background-color: transparent;
+  font-weight: var(--promotional-alternate-font-weight);
+  padding: 0 0 var(--promotional-alternate-padding-y);
+}
+
+.kds-Price--alternate .kds-Price-promotional {
+  font-family: var(--promotional-alternate-font);
+  padding: 0 0 var(--promotional-alternate-padding-y);
+}
+
+.kds-Price--alternate .kds-Price-promotional--decorated {
+  background-color: transparent;
+  display: inline-block;
+  padding: 0 var(--promotional-alternate-padding-x) var(--promotional-alternate-padding-y);
+}
+
+.kds-Price-promotional-dropCaps {
+  font-size: var(--promotional-alternate-font-size);
+  line-height: 0;
+  position: relative;
+  top: 0.625rem;
+}
+
+.kds-Price-superscript {
+  top: 0;
+  font-size: var(--superscript-font-size);
+  line-height: var(--promotional-surface-height);
+}
+
+.kds-Price-relativePrefix {
+  display: inline-block;
+  margin: 0 var(--general-spacing-x) var(--general-spacing-y) 0;
+  line-height: 1;
+}
+
+.kds-Price--compact .kds-Price-relativePrefix {
+  margin: 0 var(--general-spacing-x) var(--general-compact-spacing-y) 0;
+}
+
+.kds-Price--alternate .kds-Price-relativePrefix {
+  display: block;
+  margin: 0 var(--general-spacing-x) var(--general-spacing-y) 0;
+}
+
+.kds-Price-relativePostfix {
+  display: inline-block;
+  margin: var(--general-spacing-y) var(--general-spacing-x) 0 0;
+  line-height: 1;
+}
+
+.kds-Price--compact .kds-Price-relativePostfix {
+  margin: var(--general-compact-spacing-y) var(--general-spacing-x) 0 0;
+}
+
+.kds-Price--compact .kds-Price-promotional {
+  padding: var(--promotional-compact-padding-y) var(--promotional-compact-padding-x);
+}
+
+.kds-Price--alternate.kds-Price--compact .kds-Price-promotional {
+  font-family: inherit;
+  font-size: var(--promotional-font-compact-text-size);
+  padding: 0 0 var(--promotional-alternate-compact-padding-y);
+}
+
+.kds-Price--alternate.kds-Price--compact .kds-Price-superscript {
+  font-size: var(--promotional-font-compact-text-size);
+  line-height: var(--promotional-compact-surface-height);
+  top: 0;
+}
+
+.kds-Price--compact .kds-Price-promotional-dropCaps {
+  font-size: var(--promotional-alternate-compact-font-size);
+  line-height: 0;
+  top: 0.25rem;
+}
+
+.kds-Price--alternate.kds-Price--compact .kds-Price-promotional--decorated:not(.kds-Price-promotional--plain) {
+  padding: 0 var(--promotional-alternate-compact-padding-x) var(--promotional-alternate-compact-padding-y);
+}
+
+.kds-Price--alternate .kds-Price-promotional--decorated:not(.kds-Price-promotional--plain)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--promotional-surface-height);
+  background-color: var(--promotional-surface);
+  border-radius: var(--promotional-border-radius);
+}
+
+.kds-Price--alternate.kds-Price--compact .kds-Price-promotional--decorated:not(.kds-Price-promotional--plain)::before {
+  height: var(--promotional-compact-surface-height);
+}
+
+.kds-Price-quantity {
+  display: block;
+  font-size: var(--quantity-font-size);
+  font-weight: var(--quantity-font-weight);
+  margin-top: var(--quantity-spacing);
+  white-space: nowrap;
+}
+
+.kds-Price--compact .kds-Price-quantity {
+  margin-top: var(--quantity-compact-spacing);
+}
+
+.kds-Price--alternate .kds-Price-quantity {
+  font-size: var(--promotional-font-text-size);
+  margin: var(--general-spacing-y) 0 0 0;
+}

@@ -10,6 +10,7 @@ export class CounterComponentExample {
   @Prop() variant?: string = 'primary';
   @State() counter: number = 0;
   @Event() didReset: EventEmitter;
+  
   increment = () => this.counter++;
   reset = () => {
     this.counter = 0;
